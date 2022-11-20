@@ -1,8 +1,9 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-
+import { useSelector } from "react-redux";
 const Home = () => {
-  return <Text>Home</Text>;
+  const theme = useSelector((state) => state.theme.value);
+  return <Text style={{ backgroundColor: { theme } }}>Home</Text>;
 };
 
 export default Home;
